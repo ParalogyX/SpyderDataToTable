@@ -1,0 +1,17 @@
+Sub SpyderDataToTable()
+    For i = 1 To 1000 Step 4
+        currentCell1 = "A" + CStr(i)
+        currentCell2 = "A" + CStr(i + 1)
+        currentCell3 = "A" + CStr(i + 2)
+        currentCell4 = "A" + CStr(i + 3)
+        targetCellA = "A" + CStr((i - 1) / 4 + 1)
+        targetCellB = "B" + CStr((i - 1) / 4 + 1)
+        targetCellC = "C" + CStr((i - 1) / 4 + 1)
+        targetCellD = "D" + CStr((i - 1) / 4 + 1)
+        Cells.Range(targetCellA) = Cells.Range(currentCell1)
+        Cells.Range(targetCellB) = Cells.Range(currentCell2)
+        Cells.Range(targetCellC) = Cells.Range(currentCell3)
+        Cells.Range(targetCellD) = Cells.Range(currentCell4)
+    Next i
+       
+End Sub
